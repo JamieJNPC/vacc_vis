@@ -1,16 +1,13 @@
-from datetime import datetime
-
 import dash
-import numpy as np
 import pandas
 from dash import dcc, html, Output, Input
 from plotly.subplots import make_subplots
 import plotly.graph_objs as go
-import plotly.express as px
 import pandas as pd
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 df = pd.read_csv("data.csv", usecols=['Date', 'ConfirmedCovidCases', 'ConfirmedCovidDeaths', 'PartialPercent', 'FullyPercent', 'PerBoosterDose'])
 df['AdjustedPartialPercent'] = df['PartialPercent'] - df['FullyPercent'].fillna(0)
 df['AdjustedFullyPercent'] = df['FullyPercent'] - df['PerBoosterDose'].fillna(0)
