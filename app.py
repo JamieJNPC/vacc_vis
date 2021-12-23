@@ -98,7 +98,7 @@ def update_figure(mode, options):
                           legend={'x': 0, 'y': 1, 'traceorder': 'normal'})
         fig.update_xaxes(nticks=10)
 
-        description = "Ipsum Lorem"
+        description = "To calculate the mortality rate of COVID we can simply divide the number of COVID cases in a given week by the number of deaths. Doing this allows us to see how COVID becomes more or less deadly over time."
         graph_options = []
     if mode == 3:
         fig = make_subplots()
@@ -113,7 +113,7 @@ def update_figure(mode, options):
                           legend={'x': 0, 'y': 1, 'traceorder': 'normal'})
         fig.update_xaxes(nticks=10)
 
-        description = "Ipsum Lorem"
+        description = "And now if we show the vaccination rate alongside the mortality rate we calculated earlier we can see how drasticly the vaccines have reduced our mortality rate! This is often a difficult part of the vaccines efficacy to communicate, but now hopefully you can see this very important benefit of the vaccines!"
         graph_options = []
     if mode == 4:
         fig = make_subplots()
@@ -156,7 +156,7 @@ def update_figure(mode, options):
                               legend={'x': 0.1, 'y': 1, 'traceorder': 'normal'})
         fig.update_xaxes(nticks=10)
 
-        description = "Lorem ipsum"
+        description = "Now that we've walked through this data together, feel free to mess around with it yourself and see if you can find anything else interesting about it! Toggle individual features on or off using the checkboxes below."
         graph_options = [{'label': 'Cases', 'value': 'CASES'},
         {'label': 'Deaths', 'value': 'DEATHS'},
         {'label': 'Case-Death Ratio', 'value': 'CDR'},
